@@ -1,0 +1,28 @@
+<nav>
+  <a href='/recent'>Search History</a>
+  <ul class="pagination">
+    <li>
+      <a href={{prev}}>
+        <span>&laquo;</span>
+      </a>
+    </li>
+    <li> <strong>Page {{page}}</strong> </li>
+    <li>
+      <a href="{{next}}">
+        <span>&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<hr>
+<div class="results container-fluid">
+  <div class="row">
+    {{#each image}}
+      <div class="col-xs-6 col-sm-4">
+        <img src={{this.thumbnail.url}} class="img-thumbnail"/>
+      </div>  
+    {{/each}}
+  </div>
+</div>           
+
+

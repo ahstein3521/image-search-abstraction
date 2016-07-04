@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" href="/styles.css">
+      <title>Image Search Abstraction Layer</title>
+    </head>
+    <body>
+      <main>
+        <h1>Image Search Abstraction Layer</h1>
+        <article>
+          <p>Use the endpoint <code>results/?term=**Your Query** </code> to get metadata for the top image search results</p>
+          <p>You can paginate the results by adding a query to the endpoint like <code>results/term?=puppies&offset=2</code></p>
+          <p>To get a json object of the most recent search strings, use <code>/recent?json=true</code></p>
+        </article>
+        <form method="get" action="/results">
+          <input type="text" name="term" class="search-bar">
+          <input type="submit" value="Search" class="btn">
+        </form>
+        {{#if image}}
+          {{>results}} 
+        {{/if}}
+        {{#if terms}}
+          {{>searchTerms}}
+        {{/if}}       
+      <main>    
+    <body>    
+</html>
